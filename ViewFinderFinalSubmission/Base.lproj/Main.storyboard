@@ -13,7 +13,7 @@
         <!--ViewFinder-->
         <scene sceneID="3Fl-2u-a0o">
             <objects>
-                <tableViewController id="WbW-dX-bfD" sceneMemberID="viewController">
+                <tableViewController id="WbW-dX-bfD" customClass="PhotoTableViewController" customModule="ViewFinderFinalSubmission" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="u3k-NI-bX5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
         <!--Add New Photo-->
         <scene sceneID="Bmm-me-WbW">
             <objects>
-                <viewController id="sSj-g6-agp" sceneMemberID="viewController">
+                <viewController id="sSj-g6-agp" customClass="AddPhotoViewController" customModule="ViewFinderFinalSubmission" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hUl-Jc-0sh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,11 +57,17 @@
                                 <rect key="frame" x="20" y="595" width="154" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="sSj-g6-agp" eventType="touchUpInside" id="ShX-0b-FAY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKc-mE-1iZ">
                                 <rect key="frame" x="240" y="595" width="154" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="photoLibraryTapped:" destination="sSj-g6-agp" eventType="touchUpInside" id="5ID-VH-fcC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9W4-tf-Yq1">
                                 <rect key="frame" x="20" y="714" width="154" height="111"/>
@@ -72,6 +78,9 @@
                                 <rect key="frame" x="240" y="714" width="154" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="hitPhotoSave:" destination="sSj-g6-agp" eventType="touchUpInside" id="2Zt-tl-ldI"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DefaultPicture" translatesAutoresizingMaskIntoConstraints="NO" id="y9l-zj-1MB">
                                 <rect key="frame" x="54" y="119" width="307" height="190"/>
@@ -89,10 +98,14 @@
                         <viewLayoutGuide key="safeArea" id="4oX-gv-iub"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo" id="wtD-6u-1Nm"/>
+                    <connections>
+                        <outlet property="captionText" destination="47y-qE-Hbx" id="wr2-bI-It3"/>
+                        <outlet property="newImage" destination="y9l-zj-1MB" id="T9e-Ka-tEo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6P-16-a3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1837.68115942029" y="121.875"/>
+            <point key="canvasLocation" x="2007" y="122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IxA-Ox-SOb">
