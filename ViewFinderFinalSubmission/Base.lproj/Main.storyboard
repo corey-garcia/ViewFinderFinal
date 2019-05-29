@@ -36,10 +36,13 @@
                     <navigationItem key="navigationItem" title="ViewFinder" id="0Xo-s7-sBz">
                         <barButtonItem key="rightBarButtonItem" title="+" id="b86-bj-l4d">
                             <connections>
-                                <segue destination="sSj-g6-agp" kind="show" id="b2M-Zz-9XT"/>
+                                <segue destination="sSj-g6-agp" kind="show" identifier="photoSelectedSegue" id="b2M-Zz-9XT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Z4K-9m-eKw" kind="show" id="7is-2Y-Z6d"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npy-wn-9Ou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,6 +109,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6P-16-a3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2007" y="122"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="d8t-T4-vgU">
+            <objects>
+                <viewController id="Z4K-9m-eKw" customClass="PhotoDetailViewController" customModule="ViewFinderFinalSubmission" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vqr-qz-VbX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4KH-PZ-JdL">
+                                <rect key="frame" x="54" y="153" width="307" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LHN-Wu-hhO"/>
+                    </view>
+                    <connections>
+                        <outlet property="savedPhotoSelected" destination="4KH-PZ-JdL" id="ygM-Di-EA8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vFm-wA-Yxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2950.7246376811595" y="125.89285714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IxA-Ox-SOb">
